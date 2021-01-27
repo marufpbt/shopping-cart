@@ -1,12 +1,26 @@
-	//add plus
 
-
-function addPlusMinus(id, countPlusMinus){
+//phone section
+	//addPlusBtn
 	var count = 1;
-	var getSpinnerText = document.getElementById("getSpinnerText");
-	document.getElementById(id).addEventListener("click",function(){
-		countPlusMinus;
-		getSpinnerText.value = count;
-	});
+	const addPlusBtn = document.getElementById("addPlusBtn");
+	addPlusBtn.addEventListener("click", function () {
+		count++;
+		const spinnerText = document.getElementById("spinnerText");
+		spinnerText.value = count;
+		const qtyPrice = document.getElementById("qtyPrice").innerText;
+		parseFloat(qtyPrice);
+		const qtyPriceNumber = document.getElementById("qtyPrice").innerText = count * 1219;
 
-	//add minus
+	})
+	//addMinusBtn
+	const addMinusBtn = document.getElementById("addMinusBtn");
+	addMinusBtn.addEventListener("click", function () {
+		count--;
+		const spinnerText = document.getElementById("spinnerText");
+		spinnerText.value = count;
+		const qtyPrice = document.getElementById("qtyPrice").innerText;
+		parseFloat(qtyPrice);
+		const qtyPriceNumber = document.getElementById("qtyPrice").innerText = count * 1219;
+
+	})
+
