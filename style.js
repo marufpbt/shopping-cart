@@ -8,6 +8,5 @@ function addPlusMinus(id, countPlusMinus){
 		countPlusMinus;
 		getSpinnerText.value = count;
 	});
-}
-var result = addPlusMinus("addPlus", count++);
-console.log(result);
+
+	//add minus
