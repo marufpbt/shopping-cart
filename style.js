@@ -38,5 +38,27 @@ function handleProductChange(product, isIncrease) {
 	}
 	document.getElementById(product + 'Total').innerText = productTotal;
 
+	calculateTotal();
+
 }
 
+
+function calculateTotal(){
+	const caseInput = document.getElementById("caseInput");
+	const caseCount = parseInt(caseInput.value);
+
+	const phoneInput = document.getElementById("phoneInput");
+	const phoneCount = parseInt(phoneInput.value);
+
+	const subTotal = caseCount * 59 + phoneCount * 1229;
+	document.getElementById("subTotal").innerText = subTotal;
+
+	const tax = Math.round(subTotal * .1);
+	const taxInput = document.getElementById("taxInput");
+	taxInput.innerText = tax;
+
+	const grandTotal = subTotal + tax;
+	const grandTotalInput = document.getElementById("grandTotal");
+	grandTotalInput.innerText = grandTotal;
+
+}
