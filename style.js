@@ -1,26 +1,20 @@
+//case increase
+document.getElementById("caseIncrease").addEventListener("click", function () {
+	const caseInput = document.getElementById("caseInput");
+	const caseCount = parseInt(caseInput.value);
+	const caseNewCount = caseCount + 1;
+	caseInput.value = caseNewCount;
+	const caseTotal = document.getElementById("caseTotal");
+	caseTotal.innerHTML = caseNewCount * 59;
+})
 
-//phone section
-	//addPlusBtn
-	var count = 1;
-	const addPlusBtn = document.getElementById("addPlusBtn");
-	addPlusBtn.addEventListener("click", function () {
-		count++;
-		const spinnerText = document.getElementById("spinnerText");
-		spinnerText.value = count;
-		const qtyPrice = document.getElementById("qtyPrice").innerText;
-		parseFloat(qtyPrice);
-		const qtyPriceNumber = document.getElementById("qtyPrice").innerText = count * 1219;
 
-	})
-	//addMinusBtn
-	const addMinusBtn = document.getElementById("addMinusBtn");
-	addMinusBtn.addEventListener("click", function () {
-		count--;
-		const spinnerText = document.getElementById("spinnerText");
-		spinnerText.value = count;
-		const qtyPrice = document.getElementById("qtyPrice").innerText;
-		parseFloat(qtyPrice);
-		const qtyPriceNumber = document.getElementById("qtyPrice").innerText = count * 1219;
-
-	})
-
+//case decrease
+document.getElementById("caseDecrease").addEventListener("click",function(){
+	const caseInput = document.getElementById("caseInput");
+	const caseCount = parseInt(caseInput.value);
+	const caseNewCount = caseCount - 1;
+	caseInput.value = caseNewCount;
+	const caseTotal = document.getElementById("caseTotal");
+	caseTotal.innerHTML = caseNewCount * 59;
+})
