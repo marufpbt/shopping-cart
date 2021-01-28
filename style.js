@@ -1,20 +1,25 @@
-//case increase
+//case increase + case decrease with merging
 document.getElementById("caseIncrease").addEventListener("click", function () {
-	const caseInput = document.getElementById("caseInput");
-	const caseCount = parseInt(caseInput.value);
-	const caseNewCount = caseCount + 1;
-	caseInput.value = caseNewCount;
-	const caseTotal = document.getElementById("caseTotal");
-	caseTotal.innerHTML = caseNewCount * 59;
+	handleProductChange(true);
 })
 
 
-//case decrease
 document.getElementById("caseDecrease").addEventListener("click",function(){
+	handleProductChange(false);
+})
+
+
+function handleProductChange(isIncrease){
 	const caseInput = document.getElementById("caseInput");
 	const caseCount = parseInt(caseInput.value);
-	const caseNewCount = caseCount - 1;
+	let caseNewCount = caseCount;
+	if (isIncrease == true){
+		caseNewCount = caseCount + 1;
+	}
+	if (isIncrease == false && caseCount > 0) {
+		caseNewCount = caseCount - 1;
+	}
 	caseInput.value = caseNewCount;
 	const caseTotal = document.getElementById("caseTotal");
-	caseTotal.innerHTML = caseNewCount * 59;
-})
+	caseTotal.innerText = caseNewCount * 59;
+}
